@@ -7,7 +7,16 @@
 
 import UIKit
 
+protocol HomeViewProtocol:NSObject {
+    func tappedEnterButton()
+}
+
 class HomeView: UIView {
+    
+    private weak var delegate: HomeViewProtocol?
+    public func delegate(delegate: HomeViewProtocol) {
+        self.delegate = delegate
+    }
     
     lazy var logoImageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -33,6 +42,7 @@ class HomeView: UIView {
         $0.layer.cornerRadius = 8
         $0.layer.borderWidth = 2
         $0.layer.borderColor = UIColor(red: 207/255, green: 0/255, blue: 192/255, alpha: 1.0).cgColor
+        $0.addTarget(self, action: #selector(tappedEnterButton), for: .touchUpInside)
         return $0
         
     }(UIButton(type: .system))
@@ -51,6 +61,10 @@ class HomeView: UIView {
         addSubview(logoImageView)
         addSubview(titleLabel)
         addSubview(enterButton)
+    }
+    
+    @objc func tappedEnterButton() {
+        self.delegate?.tappedEnterButton()
     }
     
     private func configConstraints() {
