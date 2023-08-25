@@ -9,6 +9,13 @@ import UIKit
 
 class SelectionViewController: UIViewController {
     
+    var selectionView: SelectionView?
+    
+    override func loadView() {
+        selectionView = SelectionView()
+        view = selectionView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .orange
