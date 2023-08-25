@@ -20,6 +20,24 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         homeView?.delegate(delegate: self)
+        configNotification()
+    }
+    
+    public func configNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(observeMac), name: Notification.Name("macbook"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(observeImac), name: NSNotification.Name("imac"), object: nil)
+    }
+    
+    @objc func observeMac() {
+        view.backgroundColor = .blue
+        homeView?.logoImageView.image = UIImage(named: "macbook_pro")
+        homeView?.titleLabel.text = "macbook pro"
+    }
+    
+    @objc func observeImac() {
+        view.backgroundColor = .magenta
+        homeView?.logoImageView.image = UIImage(named: "Imac")
+        homeView?.titleLabel.text = "Imac"
     }
 }
 
