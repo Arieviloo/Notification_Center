@@ -26,6 +26,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewProtocol {
     func tappedEnterButton() {
         print("\(#function) -> eita ")
+        let selectVC = SelectionViewController()
+        selectVC.modalPresentationStyle = .fullScreen
+        present(selectVC, animated: true)
     }
 }
 

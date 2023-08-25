@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22640EC2A991FCE00AE8519 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22640EB2A991FCE00AE8519 /* SelectionViewController.swift */; };
+		E22640EE2A991FD400AE8519 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22640ED2A991FD400AE8519 /* SelectionView.swift */; };
 		E2D506F82A97B7EC004141E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D506F72A97B7EC004141E3 /* AppDelegate.swift */; };
 		E2D506FA2A97B7EC004141E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D506F92A97B7EC004141E3 /* SceneDelegate.swift */; };
 		E2D506FC2A97B7EC004141E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D506FB2A97B7EC004141E3 /* HomeViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E22640EB2A991FCE00AE8519 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		E22640ED2A991FD400AE8519 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		E2D506F42A97B7EC004141E3 /* Notification_Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notification_Center.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D506F72A97B7EC004141E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D506F92A97B7EC004141E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E22640EA2A991F9D00AE8519 /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				E22640EB2A991FCE00AE8519 /* SelectionViewController.swift */,
+				E22640ED2A991FD400AE8519 /* SelectionView.swift */,
+			);
+			name = Selection;
+			path = Resouces/Selection;
+			sourceTree = "<group>";
+		};
 		E2D506EB2A97B7EC004141E3 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +72,7 @@
 			children = (
 				E2D5070C2A97BAB0004141E3 /* Resouces */,
 				E2D5070B2A97BA41004141E3 /* Home */,
+				E22640EA2A991F9D00AE8519 /* Selection */,
 				E2D506F72A97B7EC004141E3 /* AppDelegate.swift */,
 				E2D506F92A97B7EC004141E3 /* SceneDelegate.swift */,
 				E2D507052A97B7ED004141E3 /* Info.plist */,
@@ -153,10 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22640EC2A991FCE00AE8519 /* SelectionViewController.swift in Sources */,
 				E2D506FC2A97B7EC004141E3 /* HomeViewController.swift in Sources */,
 				E2D5070E2A97BC30004141E3 /* HomeView.swift in Sources */,
 				E2D506F82A97B7EC004141E3 /* AppDelegate.swift in Sources */,
 				E2D506FA2A97B7EC004141E3 /* SceneDelegate.swift in Sources */,
+				E22640EE2A991FD400AE8519 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
