@@ -27,7 +27,6 @@ class HomeView: UIView {
     
     lazy var titleLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.text = "Text title"
         $0.font = UIFont.systemFont(ofSize: 28)
         $0.tintColor = .gray
         return $0
@@ -71,6 +70,8 @@ class HomeView: UIView {
         NSLayoutConstraint.activate([
             logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -80),
+            logoImageView.widthAnchor.constraint(equalToConstant: 200),
+            logoImageView.heightAnchor.constraint(equalToConstant: 200),
             
             titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 10),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),

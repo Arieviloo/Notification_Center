@@ -19,5 +19,19 @@ class SelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .orange
+        
+        selectionView?.delegate(delegate: self)
+    }
+}
+
+extension SelectionViewController: SelectionViewProtocol {
+    func tappedMacButton() {
+        NotificationCenter.default.post(name: Notification.Name("macbook"), object: nil)
+        dismiss(animated: true)
+    }
+    
+    func tappedImacButton() {
+        NotificationCenter.default.post(name: Notification.Name("imac"), object: nil)
+        dismiss(animated: true)
     }
 }
