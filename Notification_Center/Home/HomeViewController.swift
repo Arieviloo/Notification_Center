@@ -19,8 +19,16 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        homeView?.delegate(delegate: self)
     }
+}
 
-
+extension HomeViewController: HomeViewProtocol {
+    func tappedEnterButton() {
+        print("\(#function) -> eita ")
+        let selectVC = SelectionViewController()
+        selectVC.modalPresentationStyle = .fullScreen
+        present(selectVC, animated: true)
+    }
 }
 
