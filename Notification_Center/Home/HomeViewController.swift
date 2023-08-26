@@ -45,7 +45,11 @@ extension HomeViewController: HomeViewProtocol {
     func tappedEnterButton() {
         print("\(#function) -> eita ")
         let selectVC = SelectionViewController()
-        selectVC.modalPresentationStyle = .fullScreen
+//        selectVC.modalPresentationStyle = .fullScreen
+        if let sheet = selectVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 20
+        }
         present(selectVC, animated: true)
     }
 }
